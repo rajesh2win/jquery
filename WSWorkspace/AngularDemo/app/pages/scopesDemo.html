@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title ng-bind="title"></title>
+    <script src="../lib/angular/angular.js"></script>
+    <script src="../lib/angular/angular-route.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/controllers.js"></script>
+    <script src="../js/filters.js"></script>
+    <script src="../js/directives.js"></script></body>
+
+</head>
+<body ng-controller="SiteController">
+<span>{{publisher}} excels in {{type}} books</span>
+<div ng-controller="BookController">
+    <h3>Some of the popular books from {{publisher}}</h3>
+    My Wish List Count: {{wishListCount}}
+    <ul>
+        <li ng-repeat="book in books">
+            {{book}}. <a href="#" ng-click="addToWishList(book)">Add to
+            Wish List</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

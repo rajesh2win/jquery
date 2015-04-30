@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="promiseApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Promise</title>
+    <script type="text/javascript" src="../lib/angular/angular.js"></script>
+    <script src="../js/promiseDemo.js"></script>
+</head>
+
+<body ng-controller="PromiseController">
+<input type="button" ng-click="getAsyncMessage()" value="Get me an async message"/>
+<input type="button" ng-click="cancelRequested=true" value="Cancel Fetching Message"/><br/>
+Promise Status - {{status}}
+</body>
+
+</html>

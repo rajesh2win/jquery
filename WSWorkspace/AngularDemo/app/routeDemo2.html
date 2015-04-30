@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Routing</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <script type="text/ng-template" id="/view1.tpl">
+    <p>
+      First name: <input type="text" ng-model="firstname"/> <br/>
+      Last name: <input type="text" ng-model="lastname"/> <br/>
+      <button ng-click="loadView2()">Load View2</button>
+    </p>
+  </script>
+  <script type="text/ng-template" id="/view2.tpl">
+    <p>
+      From View2.
+    <ul>
+      <li>First name: {{firstname}}</li>
+      <li>Last name: {{lastname}}</li>
+    </ul>
+    </p>
+    Our additional users are:
+    <ul>
+      <li ng-repeat="name in names">
+        {{name}}
+      </li>
+    </ul>
+  </script>
+</head>
+<body>
+<!--<ul class="menu">
+  <li><a href="/view1">view1</a></li>
+  <li><a href="/view2">view2</a></li>
+</ul>-->
+<div ng-view></div>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

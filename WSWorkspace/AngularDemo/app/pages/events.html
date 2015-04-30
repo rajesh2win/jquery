@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Events</title>
+    <script src="../lib/angular/angular.js"></script>
+    <script src="../lib/angular/angular-route.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/controllers.js"></script>
+    <script src="../js/filters.js"></script>
+    <script src="../js/directives.js"></script>
+</head>
+<body>
+<div ng-controller="MessageController">
+    <h4>Messages:</h4>
+    <ul>
+        <li ng-repeat="message in messages">
+            {{message.text}}
+        </li>
+    </ul>
+    <div ng-controller="StatsController">
+        <h4>Stats:</h4>
+        <div>{{messages.length}} Message(s)</div>
+        <div>Status: <span style="color: {{statusColor}}">{{statusColor}} -- {{status}}</span>
+        </div>
+    </div>
+</div>
+<div ng-controller="TestController">
+    <button ng-click="testService()">Test Service</button>
+</div>
+</body>
+</html>

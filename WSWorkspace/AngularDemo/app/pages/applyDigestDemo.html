@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title ng-bind="title"></title>
+    <script src="../lib/angular/angular.js"></script>
+    <script src="../lib/angular/angular-route.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/controllers.js"></script>
+    <script src="../js/filters.js"></script>
+    <script src="../js/directives.js"></script>
+
+</head>
+<body ng-controller="TimeoutController">
+<button ng-click="scheduleTask()">Get Message after 3 seconds</button>
+<br/>Message fetched: {{message}}
+</body>
+</html>

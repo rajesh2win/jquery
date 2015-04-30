@@ -1,0 +1,22 @@
+<!--<div ng-controller="partialsController2">-->
+<div id="p2">
+<p>This is the partial for view 2.</p>
+<p>
+  Showing of 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
+
+<p>
+  From View2.
+<ul>
+  <li>First name: {{firstname}}</li>
+  <li>Last name: {{lastname}}</li>
+</ul>
+</p>
+  Our additional users are:
+  <ul>
+    <li ng-repeat="name in names">
+      {{name}}
+    </li>
+  </ul>
+</div>
